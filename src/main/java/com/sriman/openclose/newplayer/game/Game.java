@@ -29,10 +29,9 @@ public class Game extends GameTemplate {
             String humanInput = humanPlayer.play();
             String aiInput = aiPlayer.play();
 
-            int totalOpenHandCount = PossibleAiInput.findByUserInput(humanInput.substring(0, 2)).getOpenHands() +
-                    PossibleAiInput.findByUserInput(aiInput).getOpenHands();
 
-            if(totalOpenHandCount == Integer.valueOf(humanInput.substring(2))){
+
+            if(ResultEvaluator.findWinner(humanInput, aiInput)){
                 System.out.println("You WIN!!");
                 System.out.println("Do you want to play again?");
                 String wantToPlayAgain = scanner.nextLine();

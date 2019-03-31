@@ -12,7 +12,12 @@ public class AIPlayer {
     }
 
     public String play(){
-        String aiInput = AIRandomInputGenerator.getRandomAiInput();
+        String aiInput;
+        if (playingAs.getRole().equalsIgnoreCase(Role.AS_PREDICTOR.getRole())){
+            aiInput = AIRandomInputGenerator.getRandomAiInputWithNumber();
+        } else {
+            aiInput = AIRandomInputGenerator.getRandomAiInputWithoutNumber();
+        }
         System.out.println("AI : " + aiInput);
         return aiInput;
     }
