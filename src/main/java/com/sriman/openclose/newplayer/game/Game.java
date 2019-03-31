@@ -3,8 +3,6 @@ package com.sriman.openclose.newplayer.game;
 import com.sriman.openclose.newplayer.role.Role;
 import com.sriman.openclose.newplayer.player.AIPlayer;
 import com.sriman.openclose.newplayer.player.HumanPlayer;
-import com.sriman.openclose.newplayer.utils.PossibleAiInput;
-
 import java.util.Scanner;
 
 public class Game extends GameTemplate {
@@ -29,8 +27,6 @@ public class Game extends GameTemplate {
             String humanInput = humanPlayer.play();
             String aiInput = aiPlayer.play();
 
-
-
             if(ResultEvaluator.findWinner(humanInput, aiInput)){
                 System.out.println("You WIN!!");
                 System.out.println("Do you want to play again?");
@@ -41,8 +37,7 @@ public class Game extends GameTemplate {
             } else {
                 System.out.println("No winner.");
             }
-            humanPlayer.changeRole();
-            aiPlayer.changeRole();
+
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

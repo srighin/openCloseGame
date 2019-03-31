@@ -5,11 +5,9 @@ import com.sriman.openclose.newplayer.validator.HumanInputValidator;
 
 import java.util.Scanner;
 
-public class HumanPlayer {
+public class HumanPlayer extends IPlayer {
 
-    private Role playingAs;
     private Scanner scanner;
-
 
     public HumanPlayer(Role playingAs) {
         this.playingAs = playingAs;
@@ -27,16 +25,8 @@ public class HumanPlayer {
             System.out.println("Please provide valid Input");
             userInput = scanner.nextLine();
         }
+        changeRole();
         return userInput;
-    }
-
-
-    public void changeRole() {
-        if(this.playingAs.getRole().equals(Role.AS_PREDICTOR.getRole())){
-            this.playingAs = Role.AS_NOT_PREDICTOR;
-        } else {
-            this.playingAs = Role.AS_PREDICTOR;
-        }
     }
 
     public void passScanner(Scanner scanner) {
