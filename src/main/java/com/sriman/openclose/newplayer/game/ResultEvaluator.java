@@ -2,8 +2,17 @@ package com.sriman.openclose.newplayer.game;
 
 import com.sriman.openclose.newplayer.utils.PossibleAiInput;
 
+/**
+ * ResultEvaluator class is used to evaluate if the prediction is matching with actual value
+ */
 public class ResultEvaluator {
 
+    /**
+     * The findWinner will evaluate who is the winner of the game.
+     * @param userInput
+     * @param aiInput
+     * @return
+     */
     public static boolean findWinner(String userInput, String aiInput){
 
         int userPrediction = -1;

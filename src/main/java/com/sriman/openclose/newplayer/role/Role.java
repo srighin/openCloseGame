@@ -1,5 +1,10 @@
 package com.sriman.openclose.newplayer.role;
 
+/**
+ * The class restrict two role in the Open close Game
+ * Predictor : can predict the open hand
+ * Non Predictor : input open close option input
+ */
 public enum Role {
 
     AS_PREDICTOR("predictor"),
