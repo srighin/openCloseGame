@@ -11,8 +11,6 @@ import static com.sriman.openclose.newplayer.constant.Constants.AI;
  */
 public class AIPlayer extends IPlayer{
 
-
-
     /**
      * Constructor set the initial role for the machine(AI) in the game
      * @param playingAs
