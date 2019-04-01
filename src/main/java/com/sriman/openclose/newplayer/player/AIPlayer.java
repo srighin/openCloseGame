@@ -3,11 +3,15 @@ package com.sriman.openclose.newplayer.player;
 import com.sriman.openclose.newplayer.utils.AIRandomInputGenerator;
 import com.sriman.openclose.newplayer.role.Role;
 
+import static com.sriman.openclose.newplayer.constant.Constants.AI;
+
 /**
  * Machine class which play with Human
  * The prediction is completely random without any pre-jurisdiction.
  */
 public class AIPlayer extends IPlayer{
+
+
 
     /**
      * Constructor set the initial role for the machine(AI) in the game
@@ -28,7 +32,7 @@ public class AIPlayer extends IPlayer{
         } else {
             aiInput = AIRandomInputGenerator.getRandomAiInputWithoutNumber();
         }
-        System.out.println("AI : " + aiInput);
+        System.out.println(AI + aiInput);
         changeRole();
         return aiInput;
     }
