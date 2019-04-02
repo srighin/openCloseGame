@@ -25,7 +25,7 @@ public class Game extends GameTemplate {
         System.out.println("Welcome to the game!");
         aiPlayer = new AIPlayer(Role.AS_NOT_PREDICTOR);
         humanPlayer = new HumanPlayer(Role.AS_PREDICTOR);
-        humanPlayer.passScanner(scanner);
+       // humanPlayer.passScanner(scanner);
     }
 
     /**

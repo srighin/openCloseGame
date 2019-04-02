@@ -1,5 +1,6 @@
 package com.sriman.openclose.newplayer.player;
 
+import com.sriman.openclose.newplayer.io.Input;
 import com.sriman.openclose.newplayer.role.Role;
 import com.sriman.openclose.newplayer.validator.HumanInputValidator;
 import java.util.Scanner;
@@ -11,7 +12,7 @@ import java.util.Scanner;
 public class HumanPlayer extends IPlayer {
 
     // This is passed from the Game class
-    private Scanner scanner;
+    private Input in = Input.INPUT;
 
     /**
      * Constructor set the initial role for the user in the game
@@ -32,20 +33,14 @@ public class HumanPlayer extends IPlayer {
             System.out.println("AI is the predictor, what is your input?");
         }
 
-        String userInput = scanner.nextLine();
+        String userInput = in.getUserInput();
         while (! HumanInputValidator.validateInput(playingAs, userInput)){
             System.out.println("Please provide valid Input");
-            userInput = scanner.nextLine();
+            userInput = in.getUserInput();
         }
         changeRole();
         return userInput;
     }
 
-    /**
-     * scanner is passed using setter injection from Game class
-     * @param scanner
-     */
-    public void passScanner(Scanner scanner) {
-        this.scanner = scanner;
-    }
+
 }
