@@ -3,7 +3,6 @@ package com.sriman.openclose.newplayer.player;
 import com.sriman.openclose.newplayer.io.Input;
 import com.sriman.openclose.newplayer.role.Role;
 import com.sriman.openclose.newplayer.validator.HumanInputValidator;
-import java.util.Scanner;
 
 /**
  * HumanPlayer class which play with Machine
@@ -33,10 +32,10 @@ public class HumanPlayer extends IPlayer {
             System.out.println("AI is the predictor, what is your input?");
         }
 
-        String userInput = in.getUserInput();
+        String userInput = in.getInput();
         while (! HumanInputValidator.validateInput(playingAs, userInput)){
             System.out.println("Please provide valid Input");
-            userInput = in.getUserInput();
+            userInput = in.getInput();
         }
         changeRole();
         return userInput;

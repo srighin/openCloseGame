@@ -4,21 +4,15 @@ import java.util.Scanner;
 
 public enum Input {
 
-    INPUT("Keyboard");
+    INPUT;
 
-    private String inputType;
     private Scanner scanner;
 
-    Input(String inputType) {
-        this.inputType = inputType;
+    Input() {
         this.scanner = new Scanner(System.in);
     }
 
-    public String getInputType(String inputType) {
-        return this.inputType;
-    }
-
-    public String getUserInput(){
+    public String getInput(){
         return scanner.nextLine();
     }
 
