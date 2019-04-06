@@ -52,6 +52,12 @@ public class Game extends GameTemplate {
             } else {
                 System.out.println("No winner.");
             }
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
     }
